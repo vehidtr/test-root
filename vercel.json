@@ -1,16 +1,13 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    },
-    {
-      "source": "/app/:path*",
-      "destination": "https://app.moonastudios.com/:path*"
-    },
-    {
-      "source": "/add/:path*",
-      "destination": "https://landing.moonastudios.com/:path*"
-    }
-  ]
-}
+    "rewrites": [
+      {
+        "source": "/app/:path*",
+        "destination": "https://app.moonastudios.com/:path*"
+      },
+      {
+        "source": "/:path*",
+        "destination": "https://landing.moonastudios.com/:path*"
+      }
+    ]
+  }
+  
