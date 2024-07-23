@@ -2,12 +2,11 @@
     "rewrites": [
       {
         "source": "/app/:path*",
-        "destination": "/middleware"
+        "destination": "https://app.moonastudios.com/:path*"
       },
       {
         "source": "/:path*",
-        "destination": "/middleware"
+        "destination": "https://landing.moonastudios.com/:path*"
       }
     ]
   }
-  
