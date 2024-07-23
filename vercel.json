@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/app/:path*",
+        "destination": "/middleware"
+      },
+      {
+        "source": "/:path*",
+        "destination": "/middleware"
+      }
+    ]
+  }
+  
