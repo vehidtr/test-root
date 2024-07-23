@@ -1,7 +1,3 @@
 {
-  "rewrites": [
-    {
-      "rewrites": [{ "source": "/(.*)", "destination": "https://www.google.com" }]
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "https://www.google.com" }]
 }
