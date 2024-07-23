@@ -8,16 +8,6 @@
         "source": "/(.*)",
         "destination": "https://landing.moonastudios.com/:1"
       }
-    ],
-    "routes": [
-      {
-        "src": "/app/(.*)",
-        "dest": "https://app.moonastudios.com/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "https://landing.moonastudios.com/$1"
-      }
     ]
   }
   
