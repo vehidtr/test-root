@@ -5,8 +5,19 @@
         "destination": "https://app.moonastudios.com/:path*"
       },
       {
-        "source": "/:path*",
-        "destination": "https://landing.moonastudios.com/:path*"
+        "source": "/(.*)",
+        "destination": "https://landing.moonastudios.com/:1"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/app/(.*)",
+        "dest": "https://app.moonastudios.com/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "https://landing.moonastudios.com/$1"
       }
     ]
   }
+  
