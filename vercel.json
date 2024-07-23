@@ -5,7 +5,7 @@
         "destination": "https://app.moonastudios.com/:path*"
       },
       {
-        "source": "/:path*",
+        "source": "/add/:path*",
         "destination": "https://landing.moonastudios.com/:path*"
       }
     ]
