@@ -1,11 +1,5 @@
 {
     "version": 2,
-    "middleware": [
-      {
-        "source": "/(.*)",
-        "function": "middleware.js"
-      }
-    ],
     "rewrites": [
       {
         "source": "/app/:path*",
