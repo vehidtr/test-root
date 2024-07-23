@@ -11,8 +11,7 @@
   ],
   "functions": {
     "middleware": {
-      "runtime": "edge",
-      "memory": 128
+      "runtime": "edge@1.0.0"
     }
   }
 }
