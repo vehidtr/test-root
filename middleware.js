@@ -1,14 +1,9 @@
-export function middleware(request) {
-    const url = new URL(request.url);
-  
-    if (url.pathname.startsWith("/app")) {
-      url.hostname = "app.moonastudios.com";
-      return Response.redirect(url.toString(), 307);
-    } else if (url.pathname === "/") {
-      url.hostname = "landing.moonastudios.com";
-      return Response.redirect(url.toString(), 307);
-    }
-  
-    return fetch(request);
+export async function middleware(req) {
+  const url = new URL(req.url);
+
+  if (url.pathname.startsWith("/app")) {
+    return fetch(`https://app.example.com${url.pathname}`);
   }
-  
+
+  return fetch(`https://landing.example.com${url.pathname}`);
+}
