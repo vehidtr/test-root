@@ -5,8 +5,8 @@
         "destination": "https://app.moonastudios.com/:path*"
       },
       {
-        "source": "/(.*)",
-        "destination": "https://landing.moonastudios.com/:1"
+        "source": "/:path*",
+        "destination": "https://landing.moonastudios.com/:path*"
       }
     ]
   }
