@@ -1,13 +1,20 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/app/:path*",
-      "destination": "https://app.moonastudios.com/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "https://landing.moonastudios.com/:path*"
-    }
-  ]
-}
+    "version": 2,
+    "middleware": [
+      {
+        "source": "/(.*)",
+        "function": "middleware.js"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/app/:path*",
+        "destination": "/middleware"
+      },
+      {
+        "source": "/:path*",
+        "destination": "/middleware"
+      }
+    ]
+  }
+  
