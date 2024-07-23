@@ -1,9 +1,13 @@
-export async function middleware(req) {
-  const url = new URL(req.url);
+export function middleware(request) {
+  const url = new URL(request.url);
 
+  // Redirect requests to /app/* to the app subdomain
   if (url.pathname.startsWith("/app")) {
-    return fetch(`https://app.moonastudios.com${url.pathname}`);
+    url.hostname = "app.moonastudios.com";
+    return Response.redirect(url.toString(), 308);
   }
 
-  return fetch(`https://landing.moonastudios.com${url.pathname}`);
+  // Default redirect to the landing subdomain
+  url.hostname = "landing.moonastudios.com";
+  return Response.redirect(url.toString(), 308);
 }
