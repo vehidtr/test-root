@@ -2,11 +2,17 @@
   "rewrites": [
     {
       "source": "/app/:path*",
-      "destination": "/middleware"
+      "destination": "https://app.moonastudios.com/:path*"
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "destination": "/middleware"
     }
-  ]
+  ],
+  "functions": {
+    "middleware": {
+      "runtime": "edge",
+      "memory": 128
+    }
+  }
 }
